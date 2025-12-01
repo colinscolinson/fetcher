@@ -39,6 +39,13 @@ DB_DATABASE=Имя базы данных
 DB_USERNAME=Имя пользователя
 DB_PASSWORD=Пароль
 
+https://www.phpmyadmin.co/
+Host: sql8.freesqldatabase.com
+Database name: sql8810205
+Database user: sql8810205
+Database password: QVMBrSPTNk
+Port number: 3306
+
 
 ### 🗄️ Если использовать новую базу данных
 php artisan migrate --force
