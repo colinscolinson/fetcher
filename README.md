@@ -21,19 +21,17 @@
 git clone https://github.com/colinscolinson/fetcher.git
 cd fetcher
 
-### 2️⃣ Устанавливаем зависимости
-composer install --no-interaction --prefer-dist
+### 2️⃣ Если еще не установлен Composer — скачайте и установите его.
+composer install
 
 ### 3️⃣ Настраиваем .env.example
-cp .env.example .env
-
-### 3️⃣ Настраиваем .env.example
-cp .env.example .env
+Скопируйте файл .env.example в .env и дополните API_HOST, API_KEY, API_LIMIT
 
 API_HOST=http://Айпи_из_документации:6969
 API_KEY=Ключ_из_документации
 API_LIMIT=500
 
+### Настраиваем DB в файле .env
 DB_CONNECTION=mysql
 DB_HOST=sql8.freesqldatabase.com
 DB_PORT=3306
@@ -41,11 +39,8 @@ DB_DATABASE=Имя базы данных
 DB_USERNAME=Имя пользователя
 DB_PASSWORD=Пароль
 
-composer audit
 
-
-### 🗄️ Настройка базы данных
-php artisan key:generate
+### 🗄️ Если использовать новую базу данных
 php artisan migrate --force
-
+Выгрузить по датам stocks, incomes, sales, orders данные в базу данных.
 php artisan wb:import --from=2025-11-01 --to=2025-11-05
